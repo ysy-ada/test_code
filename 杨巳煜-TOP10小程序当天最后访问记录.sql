@@ -47,7 +47,7 @@ SELECT appid
 				          FROM user_visit_log
 						WHERE ds = DATE_SUB(CURRENT_DATE,0)
 						GROUP BY appid, user_id
-				        )t1
+	                )t1
                 GROUP BY appid
                ) t2
        ) t3
