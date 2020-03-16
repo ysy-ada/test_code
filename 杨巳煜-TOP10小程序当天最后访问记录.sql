@@ -43,10 +43,10 @@ SELECT appid
           FROM (
                 SELECT appid, COUNT(user_id) AS user_cnt
                   FROM (
-				        SELECT appid, user_id
-				          FROM user_visit_log
-						WHERE ds = DATE_SUB(CURRENT_DATE,0)
-						GROUP BY appid, user_id
+			 SELECT appid, user_id
+			   FROM user_visit_log
+		         WHERE ds = DATE_SUB(CURRENT_DATE,0)
+			 GROUP BY appid, user_id
 	                )t1
                 GROUP BY appid
                ) t2
